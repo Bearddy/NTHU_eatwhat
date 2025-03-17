@@ -1,4 +1,4 @@
-restaurant = [
+let restaurant = [
     {
         "Name": "麥當勞",
         "Place": "小吃部",
@@ -194,9 +194,7 @@ let restaurant_name = document.querySelector('.restaurant_name');
 let restaurant_place = document.querySelector('.restaurant_place');
 let restaurant_time = document.querySelector('.restaurant_time');
 
-let today = new Date();
-let hours = ('0' + today.getHours()).slice(-2); 
-let minutes = ('0' + today.getMinutes()).slice(-2);
+
 
 let rest_times_hour = [];
 let rest_times_minute = [];
@@ -275,6 +273,9 @@ function getRandColor() {
 }
 
 function time_aval(rest_time){
+    let today = new Date();
+    let hours = ('0' + today.getHours()).slice(-2); 
+    let minutes = ('0' + today.getMinutes()).slice(-2);
     if(rest_time == "2400-2400"){
         return true;
     }
